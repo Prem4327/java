@@ -1,0 +1,28 @@
+Steps to Run the Gson Example
+Unlike StAX, Gson is not built into Java.  You must manually download the library and include it in your classpath. 
+1. Download the Gson JAR
+Go to the Maven Repository or Google's release page.
+Download the latest version (e.g., gson-2.10.1.jar).
+Save this file in the same folder as your Java code (GsonLab.java). 
+2. Compile the Program
+You must tell the compiler where to find the Gson classes using the -cp (classpath) flag. 
+Windows:
+javac -cp ".;gson-2.10.1.jar" GsonLab.java
+(Note: Use ; to separate the current directory . from the jar file) 
+Mac/Linux:
+javac -cp ".:gson-2.10.1.jar" GsonLab.java
+(Note: Use : to separate the current directory . from the jar file) 
+3. Run the Program
+You must include the JAR in the classpath again when running the application. 
+Windows:
+java -cp ".;gson-2.10.1.jar" GsonLab
+Mac/Linux:
+java -cp ".:gson-2.10.1.jar" GsonLab
+Expected Output:
+--- Parsed Students ---
+ID: 1, Name: Alice, Course: Java
+ID: 2, Name: Bob, Course: Python
+
+
+--- Generated JSON ---
+{"id":3,"name":"Charlie","course":"Data Science"}
